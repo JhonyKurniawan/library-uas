@@ -27,7 +27,7 @@ try {
 
                 if (move_uploaded_file($_FILES["file_cover"]["tmp_name"], $upload_path)) {
 
-                    $file_cover = "http://localhost/library/" . $upload_path;
+                    $file_cover = "https://mhdrmaulana.my.id/library/" . $upload_path;
 
                     // Update query with file_cover
                     $statement = $conn->prepare("UPDATE `tb_buku` SET `kode_kategori` = :kode_kategori, `judul` = :judul, `pengarang` = :pengarang, `penerbit` = :penerbit, `tahun` = :tahun, `harga` = :harga, `file_cover` = :file_cover WHERE `kode` = :kode;");

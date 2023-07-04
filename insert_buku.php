@@ -24,7 +24,7 @@ try {
 
                 if (move_uploaded_file($_FILES["file_cover"]["tmp_name"], $upload_path)) {
 
-                    $file_cover = "http://localhost/library/" . $upload_path;
+                    $file_cover = "https://mhdrmaulana.my.id/library/" . $upload_path;
 
                     $statement = $conn->prepare("INSERT INTO `tb_buku`(`kode`, `kode_kategori`, `judul`, `pengarang`, `penerbit`, `tahun`, `tanggal_input`, `harga`, `file_cover`) VALUES (:kode, :kode_kategori, :judul, :pengarang, :penerbit, :tahun, NOW(), :harga, :file_cover);");
 
